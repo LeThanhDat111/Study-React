@@ -5,7 +5,7 @@ import TabButton from './Tab_Button.jsx';
 function Main_Information(props) {
 	return (
 		<>
-			<li>
+			<li className="item_Concept">
 				<figure>
 					<img src={props.img} alt={props.title} className="img_main img_hover" />
 				</figure>
@@ -15,13 +15,13 @@ function Main_Information(props) {
 	);
 }
 
-function Main() {
+function Main({onSelect}) {
 	return (
 		<>
 			<main>
 				<section>
 					<h2>Khái niệm chính trong React</h2>
-					<ul>
+					<ul className="list_Concept">
 						<Main_Information img={myData[0].img} title={myData[0].title} desc={myData[0].desc} />
 						<Main_Information {...myData[1]} />
 						<Main_Information {...myData[2]} />
@@ -29,8 +29,11 @@ function Main() {
 					</ul>
 				</section>
 				<h2 className="txt_ex">Examples</h2>
-				<ul>
-					<TabButton>Button 1</TabButton>
+				<ul className="list_Dynamic">
+					<TabButton onSelect={onSelect}>Components</TabButton>
+					<TabButton onSelect={onSelect}>JSX</TabButton>
+					<TabButton onSelect={onSelect}>Props</TabButton>
+					<TabButton onSelect={onSelect}>State</TabButton>
 				</ul>
 			</main>
 		</>

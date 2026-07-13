@@ -13,10 +13,10 @@ main {
 	margin-top: 1rem;
 	display: flex;
 	align-items: center;
-    flex-direction: column;
+	flex-direction: column;
 }
 
-ul {
+.list_Concept {
 	width: 100%;
 	list-style-type: none;
 	display: flex;
@@ -40,17 +40,37 @@ figure {
 	overflow: hidden;
 }
 
-li {
+.item_Concept {
 	width: 8rem;
-	height: 15rem;
 }
 
-.txt_desc{
-    color: white;
-    font-family: sans-serif;
+.txt_desc {
+	color: white;
+	font-family: sans-serif;
 }
 
-.txt_ex{
-    color: rgb(144, 20, 179);
-    margin-top: 2rem;
+.txt_ex {
+	color: rgb(202, 34, 248);
+	margin-top: 2rem;
+}
+
+.btn {
+	background: transparent;
+	border: 2px rgb(44, 10, 44) solid;
+	border-radius: 5px;
+	padding: 6px;
+	color: chocolate;
+	font-weight: bold;
+}
+
+.btn_hover:hover{
+	background-color: aqua;
+}
+
+.list_Dynamic{
+	list-style-type: none;
+	display: flex;
+	margin-top: 1rem;
+	gap: 5rem;
+	
 }

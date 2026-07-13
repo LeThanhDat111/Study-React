@@ -4,10 +4,14 @@ import Main from './Components/MainContent/Main_Information.jsx';
 
 
 function App() {
+
+	function handleClick(){
+		alert("Đã lick");
+	}
 	return (
 		<>
 			<Header />
-			<Main />
+			<Main onSelect={handleClick} />
 		</>
 	);
 }
