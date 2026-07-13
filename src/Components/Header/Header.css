@@ -1,0 +1,21 @@
+.logo {
+	width: 20rem;
+	height: 20rem;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title_header {
+	background: linear-gradient(35deg, rgb(67, 209, 162), rgb(207, 72, 227));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.txt_header {
+	color: rgb(7, 37, 81);
+	font-weight: bold;
+}

@@ -1,0 +1,56 @@
+section {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(76, 34, 200);
+	border-radius: 5px;
+	padding: 1rem;
+}
+
+main {
+	width: 100%;
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+    flex-direction: column;
+}
+
+ul {
+	width: 100%;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+	flex-wrap: wrap;
+}
+
+.img_main {
+	width: 7rem;
+	height: 7rem;
+	object-fit: cover;
+	transition: transform 0.3s ease-in;
+}
+
+.img_hover:hover {
+	transform: scale(1.5);
+}
+
+figure {
+	overflow: hidden;
+}
+
+li {
+	width: 8rem;
+	height: 15rem;
+}
+
+.txt_desc{
+    color: white;
+    font-family: sans-serif;
+}
+
+.txt_ex{
+    color: rgb(144, 20, 179);
+    margin-top: 2rem;
+}

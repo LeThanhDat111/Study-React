@@ -1,0 +1,40 @@
+import { myData } from '../../data.js';
+import './Main_Information.css';
+import TabButton from './Tab_Button.jsx';
+
+function Main_Information(props) {
+	return (
+		<>
+			<li>
+				<figure>
+					<img src={props.img} alt={props.title} className="img_main img_hover" />
+				</figure>
+				<p className="txt_desc">{props.desc}</p>
+			</li>
+		</>
+	);
+}
+
+function Main() {
+	return (
+		<>
+			<main>
+				<section>
+					<h2>Khái niệm chính trong React</h2>
+					<ul>
+						<Main_Information img={myData[0].img} title={myData[0].title} desc={myData[0].desc} />
+						<Main_Information {...myData[1]} />
+						<Main_Information {...myData[2]} />
+						<Main_Information {...myData[3]} />
+					</ul>
+				</section>
+				<h2 className="txt_ex">Examples</h2>
+				<ul>
+					<TabButton>Button 1</TabButton>
+				</ul>
+			</main>
+		</>
+	);
+}
+
+export default Main;
