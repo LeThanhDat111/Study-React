@@ -15,7 +15,7 @@ function Main_Information(props) {
 	);
 }
 
-function Main({onSelect}) {
+function Main({ onSelect }) {
 	return (
 		<>
 			<main>
@@ -30,10 +30,10 @@ function Main({onSelect}) {
 				</section>
 				<h2 className="txt_ex">Examples</h2>
 				<ul className="list_Dynamic">
-					<TabButton onSelect={onSelect}>Components</TabButton>
-					<TabButton onSelect={onSelect}>JSX</TabButton>
-					<TabButton onSelect={onSelect}>Props</TabButton>
-					<TabButton onSelect={onSelect}>State</TabButton>
+					<TabButton onSelect={() => onSelect('Components')}>Components</TabButton>
+					<TabButton onSelect={() => onSelect('JSX')}>JSX</TabButton>
+					<TabButton onSelect={() => onSelect('Props')}>Props</TabButton>
+					<TabButton onSelect={() => onSelect('State')}>State</TabButton>
 				</ul>
 			</main>
 		</>
