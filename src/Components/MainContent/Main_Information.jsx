@@ -15,7 +15,7 @@ function Main_Information(props) {
 	);
 }
 
-function Main({ onSelect }) {
+function Main({ onSelect, prinHello, hello }) {
 	return (
 		<>
 			<main>
@@ -35,6 +35,12 @@ function Main({ onSelect }) {
 					<TabButton onSelect={() => onSelect('Props')}>Props</TabButton>
 					<TabButton onSelect={() => onSelect('State')}>State</TabButton>
 				</ul>
+				<div className="state">
+					<h3 className="txt_Hello">{hello}</h3>
+					<button className="btn_State" onClick={prinHello}>
+						Cập nhật lời chào
+					</button>
+				</div>
 			</main>
 		</>
 	);
