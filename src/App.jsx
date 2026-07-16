@@ -5,26 +5,24 @@ import { useState } from 'react';
 
 function App() {
 	const [hello, setHello] = useState('Xin chào');
+	const [selectedTopic, setSelectedTopic] = useState('components');
 	function handleClick(selectHandle) {
-		alert('Đã cick ' + selectHandle);
+		setSelectedTopic(selectHandle);
 	}
-	// let getCurrentHour = () => new Date().getHours();
-	console.log(hello);
+	let getCurrentHour = () => new Date().getHours();
+
 	let prinHello = () => {
-		let hour = randomHour();
+		let hour = getCurrentHour();
 		console.log(hour);
 		if (hour >= 5 && hour <= 12) return setHello('Chào buổi sáng!');
 		else if (hour > 12 && hour <= 18) return setHello('Chào buổi chiều!');
 		else return setHello('Chào buổi tối!');
 	};
 
-	function randomHour() {
-		return Math.floor(Math.random() * 24);
-	}
 	return (
 		<>
 			<Header />
-			<Main onSelect={handleClick} prinHello={prinHello} hello={hello} />
+			<Main onSelect={handleClick} prinHello={prinHello} hello={hello} slTopic={selectedTopic}/>
 		</>
 	);
 }

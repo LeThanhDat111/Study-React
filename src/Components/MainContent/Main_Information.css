@@ -96,3 +96,16 @@ figure {
 	gap: 20px;
 	
 }
+
+.bx_info-btn{
+	background: linear-gradient(50deg, rgb(26, 185, 5), rgb(202, 253, 0));
+	border-radius: 10px;
+	border: 2px rgb(238, 187, 16) solid;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 10px;
+	margin-top: 3rem;
+	color: chocolate;
+	font-weight: bolder;
+}

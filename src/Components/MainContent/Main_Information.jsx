@@ -1,4 +1,4 @@
-import { myData } from '../../data.js';
+import { myData, EXAMPLE } from '../../data.js';
 import './Main_Information.css';
 import TabButton from './Tab_Button.jsx';
 
@@ -15,7 +15,7 @@ function Main_Information(props) {
 	);
 }
 
-function Main({ onSelect, prinHello, hello }) {
+function Main({ onSelect, prinHello, hello, slTopic }) {
 	return (
 		<>
 			<main>
@@ -30,11 +30,18 @@ function Main({ onSelect, prinHello, hello }) {
 				</section>
 				<h2 className="txt_ex">Examples</h2>
 				<ul className="list_Dynamic">
-					<TabButton onSelect={() => onSelect('Components')}>Components</TabButton>
-					<TabButton onSelect={() => onSelect('JSX')}>JSX</TabButton>
-					<TabButton onSelect={() => onSelect('Props')}>Props</TabButton>
-					<TabButton onSelect={() => onSelect('State')}>State</TabButton>
+					<TabButton onSelect={() => onSelect('components')}>Components</TabButton>
+					<TabButton onSelect={() => onSelect('jsx')}>JSX</TabButton>
+					<TabButton onSelect={() => onSelect('props')}>Props</TabButton>
+					<TabButton onSelect={() => onSelect('state')}>State</TabButton>
 				</ul>
+				<div className="bx_info-btn">
+					<h3>{EXAMPLE[slTopic].title}</h3>
+					<p>{EXAMPLE[slTopic].desc}</p>
+					<pre>
+						<code>{EXAMPLE[slTopic].code}</code>
+					</pre>
+				</div>
 				<div className="state">
 					<h3 className="txt_Hello">{hello}</h3>
 					<button className="btn_State" onClick={prinHello}>
