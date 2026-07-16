@@ -30,10 +30,18 @@ function Main({ onSelect, prinHello, hello, slTopic }) {
 				</section>
 				<h2 className="txt_ex">Examples</h2>
 				<ul className="list_Dynamic">
-					<TabButton onSelect={() => onSelect('components')}>Components</TabButton>
-					<TabButton onSelect={() => onSelect('jsx')}>JSX</TabButton>
-					<TabButton onSelect={() => onSelect('props')}>Props</TabButton>
-					<TabButton onSelect={() => onSelect('state')}>State</TabButton>
+					<TabButton onSelect={() => onSelect('components')} isSelected={slTopic === 'components'}>
+						Components
+					</TabButton>
+					<TabButton onSelect={() => onSelect('jsx')} isSelected={slTopic === 'jsx'}>
+						JSX
+					</TabButton>
+					<TabButton onSelect={() => onSelect('props')} isSelected={slTopic === 'props'}>
+						Props
+					</TabButton>
+					<TabButton onSelect={() => onSelect('state')} isSelected={slTopic === 'state'}>
+						State
+					</TabButton>
 				</ul>
 				<div className="bx_info-btn">
 					<h3>{EXAMPLE[slTopic].title}</h3>

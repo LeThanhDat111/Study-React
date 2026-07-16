@@ -63,6 +63,15 @@ figure {
 	font-weight: bold;
 }
 
+.btn_Selected {
+	background: transparent;
+	border: 2px rgb(170, 13, 149) solid;
+	border-radius: 5px;
+	padding: 6px;
+	color: chocolate;
+	font-weight: bold;
+}
+
 .btn_hover:hover{
 	background-color: aqua;
 }

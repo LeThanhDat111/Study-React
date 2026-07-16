@@ -22,7 +22,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Main onSelect={handleClick} prinHello={prinHello} hello={hello} slTopic={selectedTopic}/>
+			<Main onSelect={handleClick} prinHello={prinHello} hello={hello} slTopic={selectedTopic} />
 		</>
 	);
 }
