@@ -43,13 +43,17 @@ function Main({ onSelect, prinHello, hello, slTopic }) {
 						State
 					</TabButton>
 				</ul>
-				<div className="bx_info-btn">
-					<h3>{EXAMPLE[slTopic].title}</h3>
-					<p>{EXAMPLE[slTopic].desc}</p>
-					<pre>
-						<code>{EXAMPLE[slTopic].code}</code>
-					</pre>
-				</div>
+				{!slTopic ? (
+					<p>Vui lòng chọn tab cần tìm hiểu về React!</p>
+				) : (
+					<div className="bx_info-btn">
+						<h3>{EXAMPLE[slTopic].title}</h3>
+						<p>{EXAMPLE[slTopic].desc}</p>
+						<pre>
+							<code>{EXAMPLE[slTopic].code}</code>
+						</pre>
+					</div>
+				)}
 				<div className="state">
 					<h3 className="txt_Hello">{hello}</h3>
 					<button className="btn_State" onClick={prinHello}>

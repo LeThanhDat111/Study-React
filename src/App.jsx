@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function App() {
 	const [hello, setHello] = useState('Xin chào');
-	const [selectedTopic, setSelectedTopic] = useState('components');
+	const [selectedTopic, setSelectedTopic] = useState();
 	function handleClick(selectHandle) {
 		setSelectedTopic(selectHandle);
 	}
