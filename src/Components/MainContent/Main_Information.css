@@ -72,19 +72,18 @@ figure {
 	font-weight: bold;
 }
 
-.btn_hover:hover{
+.btn_hover:hover {
 	background-color: aqua;
 }
 
-.list_Dynamic{
+.list_Dynamic {
 	list-style-type: none;
 	display: flex;
 	margin-top: 1rem;
 	gap: 5rem;
-	
 }
 
-.btn_State{
+.btn_State {
 	background-color: rgb(87, 7, 87);
 	color: rgb(172, 172, 52);
 	border-radius: 5px;
@@ -92,21 +91,19 @@ figure {
 	border: 1.5px rgb(33, 142, 131) solid;
 }
 
-
-.txt_Hello{
+.txt_Hello {
 	/* margin: 50px; */
 	color: aqua;
 }
 
-.state{
+.state {
 	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	
 }
 
-.bx_info-btn{
+.bx_info-btn {
 	background: linear-gradient(50deg, rgb(26, 185, 5), rgb(202, 253, 0));
 	border-radius: 10px;
 	border: 2px rgb(238, 187, 16) solid;
@@ -117,4 +114,65 @@ figure {
 	margin-top: 3rem;
 	color: chocolate;
 	font-weight: bolder;
+}
+
+.txt_info-btn {
+	margin: 20px;
+	background: linear-gradient(230deg, rgb(241, 241, 55), rgb(47, 151, 6));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.btn_active {
+	background-color: rgb(9, 139, 226);
+	padding: 3px 15px 3px 15px;
+	border: none;
+	color: white;
+	border-radius: 5px;
+}
+
+.diaglog {
+	border: 2px rgb(217, 172, 9) solid;
+	color: white;
+	background-color: rgb(37, 36, 36);
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	align-items: center;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.btn_Confirm {
+	background-color: green;
+	padding: 5px 15px;
+	border-radius: 5px;
+	border: none;
+}
+
+.btn_Cancel {
+	background-color: red;
+	padding: 5px 15px;
+	border-radius: 5px;
+	border: none;
+}
+
+.bx_btn-chose {
+	display: flex;
+	gap: 30px;
+}
+
+.active-dialog{
+	margin-top: 20px;
+}
+
+.mode_activating{
+	font-family: monospace;
+}
+
+.img_performance{
+	width: 15px;
+	height: 15px;
+	object-fit: cover;
+	vertical-align: middle;
 }
