@@ -41,26 +41,17 @@ function Main({ onSelect, prinHello, hello, slTopic }) {
 				<section>
 					<h2>Khái niệm chính trong React</h2>
 					<ul className="list_Concept">
-						<Main_Information img={myData[0].img} title={myData[0].title} desc={myData[0].desc} />
-						<Main_Information {...myData[1]} />
-						<Main_Information {...myData[2]} />
-						<Main_Information {...myData[3]} />
+						{myData.map((item) => (
+							<Main_Information {...item} key={item.title} />
+						))}
+						;
 					</ul>
 				</section>
 				<h2 className="txt_ex">Examples</h2>
 				<ul className="list_Dynamic">
-					<TabButton onSelect={() => onSelect('components')} isSelected={slTopic === 'components'}>
-						Components
-					</TabButton>
-					<TabButton onSelect={() => onSelect('jsx')} isSelected={slTopic === 'jsx'}>
-						JSX
-					</TabButton>
-					<TabButton onSelect={() => onSelect('props')} isSelected={slTopic === 'props'}>
-						Props
-					</TabButton>
-					<TabButton onSelect={() => onSelect('state')} isSelected={slTopic === 'state'}>
-						State
-					</TabButton>
+					{Object.entries(EXAMPLE).map(([key]) => (
+						<TabButton onSelect={() => onSelect(key)} isSelected={slTopic === key}>{key}</TabButton>
+					))}
 				</ul>
 				{!slTopic ? (
 					<p className="txt_info-btn">Vui lòng chọn tab cần tìm hiểu về React!</p>
@@ -99,7 +90,11 @@ function Main({ onSelect, prinHello, hello, slTopic }) {
 							</div>
 						</div>
 					)}
-					{isActivated && <p className='mode_activating'>Mode activating <img src={performace} alt="" className='img_performance'/></p>}
+					{isActivated && (
+						<p className="mode_activating">
+							Mode activating <img src={performace} alt="" className="img_performance" />
+						</p>
+					)}
 				</div>
 			</main>
 		</>

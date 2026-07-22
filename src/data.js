@@ -64,10 +64,10 @@ export const EXAMPLE = {
             )
         }`,
 	},
-    state: {
-        title: 'State',
-        desc: 'State cho phép các thành phần quản lý trạng thái động. Nó giúp giao diện phản hồi linh hoạt và các thay đổi.',
-        code: `function CongTac(){      
+	state: {
+		title: 'State',
+		desc: 'State cho phép các thành phần quản lý trạng thái động. Nó giúp giao diện phản hồi linh hoạt và các thay đổi.',
+		code: `function CongTac(){      
             const [bat, setBat]  = React.useState(false);
             function xuLyClick(){
                 setBat((bat)=> !bat);
@@ -77,6 +77,6 @@ export const EXAMPLE = {
                     {bat? 'Bật' : 'Tắt'}
                 </button>
             )
-        }`
-    }
+        }`,
+	},
 };
