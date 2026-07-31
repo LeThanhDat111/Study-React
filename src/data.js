@@ -43,10 +43,11 @@ export const EXAMPLE = {
 		title: 'JSX',
 		desc: 'JSX cho phép viết mã giao diện dễ đọc hơn bằng cách sử dụng cú pháp HTML-like. Nó giúp việc xây dựng UI nhanh chóng và hiệu quả.',
 		code: `function GioiThieu(){
-            return (
+        	return (
                 <div>
                     <h2>Giới thiệu và React</h2>
-                    <p>React giúp tạo giao diện hiện đại và dễ bảo trì.</p>
+                    <p>React giúp tạo giao diện 
+			hiện đại và dễ bảo trì.</p>
                 </div>
             )
         }`,

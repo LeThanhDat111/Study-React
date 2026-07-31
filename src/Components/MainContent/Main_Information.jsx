@@ -3,6 +3,7 @@ import { myData, EXAMPLE } from '../../data.js';
 import './Main_Information.css';
 import TabButton from './Tab_Button.jsx';
 import performace from '../../assets/img/energy.png';
+import Tabs from './Tabs.jsx';
 
 function Main_Information(props) {
 	return (
@@ -38,21 +39,26 @@ function Main({ onSelect, prinHello, hello, slTopic }) {
 	return (
 		<>
 			<main>
-				<section>
-					<h2>Khái niệm chính trong React</h2>
-					<ul className="list_Concept">
-						{myData.map((item) => (
-							<Main_Information {...item} key={item.title} />
+				{/*prettier-ignore*/}
+				<Tabs
+					title="Khái niệm chính trong React"
+					ul={
+						<ul className="list_Concept">
+							{myData.map((item) => <Main_Information {...item} key={item.title} />)}
+						</ul>
+					}
+					className="sec_custome"
+					Container="h2"
+					></Tabs>
+				<Tabs title="Examples" className="sec_tabs" Container="h2">
+					<ul className="list_Dynamic">
+						{Object.entries(EXAMPLE).map(([key]) => (
+							<TabButton onClick={() => onSelect(key)} isSelected={slTopic === key} key={key}>
+								{key}
+							</TabButton>
 						))}
-						;
 					</ul>
-				</section>
-				<h2 className="txt_ex">Examples</h2>
-				<ul className="list_Dynamic">
-					{Object.entries(EXAMPLE).map(([key]) => (
-						<TabButton onSelect={() => onSelect(key)} isSelected={slTopic === key}>{key}</TabButton>
-					))}
-				</ul>
+				</Tabs>
 				{!slTopic ? (
 					<p className="txt_info-btn">Vui lòng chọn tab cần tìm hiểu về React!</p>
 				) : (

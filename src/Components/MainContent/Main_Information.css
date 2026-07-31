@@ -1,4 +1,4 @@
-section {
+.sec_custome {
 	width: 70%;
 	display: flex;
 	flex-direction: column;
@@ -7,7 +7,11 @@ section {
 	border-radius: 5px;
 	padding: 1rem;
 }
-
+.sec_tabs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 main {
 	width: 100%;
 	margin-top: 1rem;
@@ -162,15 +166,15 @@ figure {
 	gap: 30px;
 }
 
-.active-dialog{
+.active-dialog {
 	margin-top: 20px;
 }
 
-.mode_activating{
+.mode_activating {
 	font-family: monospace;
 }
 
-.img_performance{
+.img_performance {
 	width: 15px;
 	height: 15px;
 	object-fit: cover;
