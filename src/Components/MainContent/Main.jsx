@@ -6,8 +6,10 @@ import DefinitionOfReact from './DefinitionOfReact_Main.jsx';
 import Greeting from './Greeting.jsx';
 import Dialog from './Dialog.jsx';
 import { useState } from 'react';
+import Tab_input from './Tab_input.jsx';
 
 function Main() {
+	console.log('Áp được gọi!');
 	const [selectedTopic, setSelectedTopic] = useState();
 	function handleClick(selectHandle) {
 		setSelectedTopic(selectHandle);
@@ -49,6 +51,7 @@ function Main() {
 			</Tabs>
 			<Greeting />
 			<Dialog />
+			<Tab_input />
 		</main>
 	);
 }
