@@ -7,7 +7,7 @@ import Greeting from './Greeting.jsx';
 import Dialog from './Dialog.jsx';
 import { useState } from 'react';
 import Tab_input from './Tab_input.jsx';
-
+import Login from './Login.jsx';
 function Main() {
 	console.log('Áp được gọi!');
 	const [selectedTopic, setSelectedTopic] = useState();
@@ -52,6 +52,7 @@ function Main() {
 			<Greeting />
 			<Dialog />
 			<Tab_input />
+			<Login />
 		</main>
 	);
 }

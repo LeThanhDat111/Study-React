@@ -2,11 +2,10 @@ export default function TabButton({ children, isSelected, ...props }) {
 	return (
 		<>
 			<li>
-				<button className={isSelected ? 'btn_Selected btn_hover' : 'btn btn_hover'} {...props}>
+				<button className={`btn_hover ${isSelected ? 'btn_Selected' : 'btn'}`} {...props}>
 					{children}
 				</button>
 			</li>
 		</>
 	);
 }
-
