@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Main.css';
 export default function Login() {
-	const [account, setAccount] = useState({ name: '', password: '' });
+	const [account, setAccount] = useState({ email: '', password: '' });
 	const [submit, setSubmit] = useState(false);
 	console.log(submit);
 
@@ -14,25 +14,38 @@ export default function Login() {
 		}));
 	};
 
-	const isValidateName = submit && !account.name.includes('@');
-	const isValitdatePass = submit && !account.password.length < 6;
-	if (isValidateName || isValitdatePass) {
-		console.log('Lỗi đăng nhập');
-	}
+	const isValidateName = submit && !account.email.includes('@');
+	const isValitdatePass = submit && account.password.trim().length < 6;
 
 	return (
 		<div className="login">
 			<h2>Đăng Nhập</h2>
 			<div className="form">
-				<label htmlFor="" className="lbl_login">
-					Tên tài khoản:
+				<label htmlFor="" className={`lbl_login ${isValidateName ? 'error_title' : ''}`}>
+					Email:
 				</label>
-				<input type="text" className="inp_login" name="name" placeholder="Tên đăng nhập" />
+				<input
+					type="text"
+					className={isValidateName ? 'error_inp' : ''}
+					style={{
+						padding: '10px 0px',
+						fontSize: '15px',
+					}}
+					name="email"
+					placeholder="Nhập email"
+					onChange={handleAccount}
+				/>
 
-				<label htmlFor="" className="lbl_login">
-					Mật khẩu tài khoản:
+				<label htmlFor="" className={`lbl_login ${isValitdatePass ? 'error_title' : ''}`}>
+					Mật khẩu:
 				</label>
-				<input type="password" className="inp_login" name="password" placeholder="Mật khẩu" />
+				<input
+					type="password"
+					className={`inp_login ${isValitdatePass ? 'error_inp' : ''}`}
+					name="password"
+					placeholder="Nhập mật khẩu"
+					onChange={handleAccount}
+				/>
 			</div>
 			<div className="activity">
 				<a href="#">Bạn chưa có tài khoản?</a>
