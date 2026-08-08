@@ -1,5 +1,14 @@
 import { useState } from 'react';
 import './Main.css';
+import { styled } from 'styled-components';
+
+// Dùng styled để định nghĩa Components css
+const ControllContainer = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 20px 20px;
+`;
+
 export default function Login() {
 	const [account, setAccount] = useState({ email: '', password: '' });
 	const [submit, setSubmit] = useState(false);
@@ -20,7 +29,8 @@ export default function Login() {
 	return (
 		<div className="login">
 			<h2>Đăng Nhập</h2>
-			<div className="form">
+			{/* Dùng styled-components để tạo Components css */}
+			<ControllContainer>
 				<label htmlFor="" className={`lbl_login ${isValidateName ? 'error_title' : ''}`}>
 					Email:
 				</label>
@@ -46,7 +56,7 @@ export default function Login() {
 					placeholder="Nhập mật khẩu"
 					onChange={handleAccount}
 				/>
-			</div>
+			</ControllContainer>
 			<div className="activity">
 				<a href="#">Bạn chưa có tài khoản?</a>
 				<button className="btn_submit" onClick={handleSubmit}>
