@@ -1,0 +1,46 @@
+img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
+.game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: rgb(73, 255, 170);
+	border-radius: 10px;
+	padding: 30px;
+	gap: 20px;
+}
+
+.txt_challenge {
+	color: rgb(119, 22, 238);
+	font-weight: bold;
+}
+
+div h2 {
+	color: rgb(164, 22, 62);
+}
+
+.inp_nameplayer {
+	padding: 10px 5px;
+	background-color: rgb(40, 40, 16, 0.6);
+	border: transparent;
+	border-radius: 5px;
+}
+
+.btn_nameplayer {
+	padding: 10px 20px;
+	color: palegreen;
+	background-color: rgb(79, 20, 131);
+	border-radius: 10px;
+	border: transparent;
+    margin-left: 30px;
+}
+
+.box_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}

@@ -9,6 +9,11 @@ const ControllContainer = styled.div`
 	gap: 20px 20px;
 `;
 
+const Label = styled.label`
+	font-size: 25px;
+	color: ${(props) => (props.$inValid ? 'rgb(218, 92, 92);' : 'yellow')};
+`;
+
 export default function Login() {
 	const [account, setAccount] = useState({ email: '', password: '' });
 	const [submit, setSubmit] = useState(false);
@@ -31,9 +36,7 @@ export default function Login() {
 			<h2>Đăng Nhập</h2>
 			{/* Dùng styled-components để tạo Components css */}
 			<ControllContainer>
-				<label htmlFor="" className={`lbl_login ${isValidateName ? 'error_title' : ''}`}>
-					Email:
-				</label>
+				<Label $inValid={isValidateName}>Email:</Label>
 				<input
 					type="text"
 					className={isValidateName ? 'error_inp' : ''}
