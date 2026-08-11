@@ -25,7 +25,7 @@ export default function Dialog() {
 				</button>
 			)}
 			{isAlertVisible && (
-				<div className="diaglog">
+				<div className="diaglog_mode">
 					<h3>Warming!</h3>
 					<p>Are you sure you want to active this mode?</p>
 					<div className="bx_btn-chose">

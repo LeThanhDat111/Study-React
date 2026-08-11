@@ -136,7 +136,7 @@ figure {
 	border-radius: 5px;
 }
 
-.diaglog {
+.diaglog_mode {
 	border: 2px rgb(217, 172, 9) solid;
 	color: white;
 	background-color: rgb(37, 36, 36);
@@ -244,8 +244,6 @@ a {
 	gap: 10px;
 }
 
-section h2{
+section h2 {
 	color: wheat;
-	color: rgb(31, 179, 233);
-	
 }

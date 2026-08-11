@@ -7,10 +7,11 @@ img {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: rgb(73, 255, 170);
+	background: rgb(16, 42, 30);
 	border-radius: 10px;
 	padding: 30px;
 	gap: 20px;
+	width: max-content;
 }
 
 .txt_challenge {
@@ -18,13 +19,9 @@ img {
 	font-weight: bold;
 }
 
-div h2 {
-	color: rgb(164, 22, 62);
-}
-
 .inp_nameplayer {
 	padding: 10px 5px;
-	background-color: rgb(40, 40, 16, 0.6);
+	background-color: rgba(63, 236, 236, 0.6);
 	border: transparent;
 	border-radius: 5px;
 }
@@ -35,12 +32,88 @@ div h2 {
 	background-color: rgb(79, 20, 131);
 	border-radius: 10px;
 	border: transparent;
-    margin-left: 30px;
+	margin-left: 30px;
 }
 
-.box_name{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.box_name {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.txt_printName {
+	color: rgb(111, 71, 171);
+}
+
+.tabGame {
+	background: hsla(280, 81%, 15%, 0.8);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.title_tabGame {
+	color: rgb(110, 19, 138);
+	text-shadow:
+		0 0 5px rgb(132, 20, 169),
+		0 0 10px rgb(83, 13, 130);
+	text-transform: uppercase;
+}
+.btn_game {
+	padding: 3px 20px;
+	border-radius: 5px;
+	background: linear-gradient(120deg, rgb(197, 15, 217), rgb(44, 6, 116));
+	border: transparent;
+	animation: move 2s ease-in-out;
+}
+
+.dialog_game {
+	margin: auto;
+	border-radius: 10px;
+	border: 2px solid rgb(247, 158, 6);
+}
+
+.dialog_game::backdrop {
+	background-color: rgb(54, 9, 100);
+	opacity: 0.3;
+}
+
+form h2 {
+	text-transform: uppercase;
+	background: linear-gradient(60deg, rgb(3, 103, 31), rgb(217, 10, 10));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: bolder;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+	background-color: rgb(246, 188, 13);
+}
+
+.txt_dialog {
+	font-weight: bold;
+	color: purple;
+}
+
+form p span {
+	color: red;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+form button {
+	margin-left: auto;
+	padding: 2px 20px;
+	border-radius: 10px;
+	border: transparent;
+	background: rgb(3, 132, 138);
+	color: rgb(54, 244, 6);
 }
