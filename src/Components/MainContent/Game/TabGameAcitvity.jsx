@@ -4,17 +4,19 @@ export default function TabGameActivity({ title, targetTimer }) {
 	const [submitBtn, setSubmitBtn] = useState(false);
 	const timerRef = useRef(null);
 	const dialogRef = useRef(null);
-
+	const starTime = useRef(null);
 	function handleClick() {
 		if (!submitBtn) {
 			setSubmitBtn(true);
 			timerRef.current = setTimeout(() => {
 				setSubmitBtn(false);
-				dialogRef.current.showModal();
+				dialogRef.current.open();
+				starTime.current = performance.now();
+				console.log(starTime);
 			}, targetTimer * 1000);
 		} else {
 			setSubmitBtn(false);
-			dialogRef.current.showModal();
+			dialogRef.current.open();
 			clearTimeout(timerRef.current);
 		}
 	}
