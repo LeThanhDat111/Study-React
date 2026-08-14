@@ -32,10 +32,10 @@ export default function Game() {
 				</div>
 			</div>
 			<ContainerTabGame>
-				<TabGameActivity title="Lever 1" targetTimer="1" />
-				<TabGameActivity title="Lever 2" targetTimer="5" />
-				<TabGameActivity title="Lever 3" targetTimer="10" />
-				<TabGameActivity title="Lever 4" targetTimer="15" />
+				<TabGameActivity title="Lever 1" targetTimer={1} />
+				<TabGameActivity title="Lever 2" targetTimer={5} />
+				<TabGameActivity title="Lever 3" targetTimer={10} />
+				<TabGameActivity title="Lever 4" targetTimer={15} />
 			</ContainerTabGame>
 		</div>
 	);

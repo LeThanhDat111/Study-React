@@ -71,6 +71,10 @@ img {
 	animation: move 2s ease-in-out;
 }
 
+.btn_game:hover {
+	background: linear-gradient(300deg, rgb(197, 15, 217), rgb(44, 6, 116));
+}
+
 .dialog_game {
 	margin: auto;
 	border-radius: 10px;
@@ -116,4 +120,53 @@ form button {
 	border: transparent;
 	background: rgb(3, 132, 138);
 	color: rgb(54, 244, 6);
+}
+
+.animation {
+	animation: chase 2s ease-in infinite;
+}
+
+/* .animation::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	inset: -1px;
+	border-radius: inherit;
+	animation: chase 2s ease-in infinite;
+} */
+
+@keyframes chase {
+	0% {
+		background: linear-gradient(0deg, rgb(242, 19, 11), rgb(232, 104, 6));
+	}
+	10% {
+		background: linear-gradient(33deg, rgb(239, 209, 38), rgb(196, 229, 9));
+	}
+	20% {
+		background: linear-gradient(66deg, rgb(59, 234, 6), rgb(15, 157, 3));
+	}
+	30% {
+		background: linear-gradient(99deg, rgb(15, 220, 158), rgb(6, 102, 220));
+	}
+	40% {
+		background: linear-gradient(132deg, rgb(23, 3, 138), rgb(67, 9, 204));
+	}
+	50% {
+		background: linear-gradient(165deg, rgb(49, 5, 172), rgb(35, 14, 112));
+	}
+	60% {
+		background: linear-gradient(198deg, rgb(94, 9, 212), rgb(107, 10, 198));
+	}
+	70% {
+		background: linear-gradient(231deg, rgb(152, 7, 236), rgb(167, 6, 199));
+	}
+	80% {
+		background: linear-gradient(264deg, rgb(198, 3, 198), rgb(105, 3, 91));
+	}
+	90% {
+		background: linear-gradient(297deg, rgb(207, 8, 121), rgb(142, 4, 69));
+	}
+	100% {
+		background: linear-gradient(330deg, rgb(224, 17, 62), rgb(99, 21, 26));
+	}
 }
