@@ -9,6 +9,7 @@ import { useState } from 'react';
 import Tab_input from './Tab_input.jsx';
 import Login from './Login.jsx';
 import Game from './Game/Game.jsx';
+import LoginUseReducer from './LoginUseReducer.jsx';
 function Main() {
 	console.log('Áp được gọi!');
 	const [selectedTopic, setSelectedTopic] = useState();
@@ -55,6 +56,7 @@ function Main() {
 			<Tab_input />
 			<Login />
 			<Game />
+			<LoginUseReducer />
 		</main>
 	);
 }
