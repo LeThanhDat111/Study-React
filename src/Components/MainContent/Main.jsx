@@ -11,6 +11,7 @@ import Login from './Login.jsx';
 import Game from './Game/Game.jsx';
 import LoginUseReducer from './LoginUseReducer.jsx';
 import Shop from './Shop/Shop.jsx';
+import Parents from './Mount_Unmount/Parents.jsx';
 function Main() {
 	console.log('Áp được gọi!');
 	const [selectedTopic, setSelectedTopic] = useState();
@@ -59,6 +60,7 @@ function Main() {
 			<Game />
 			<LoginUseReducer />
 			<Shop />
+			<Parents />
 		</main>
 	);
 }
