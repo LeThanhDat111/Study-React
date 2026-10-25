@@ -14,6 +14,7 @@ import Shop from './Shop/Shop.jsx';
 import Parents from './Mount_Unmount/Parents.jsx';
 import UseLayoutEffec from './UseLayoutEffect.jsx';
 import Memo from './Memo_Temp.jsx';
+import UseMeMo from './UseMeMo.jsx';
 function Main() {
 	console.log('Áp được gọi!');
 	const [selectedTopic, setSelectedTopic] = useState();
@@ -65,6 +66,7 @@ function Main() {
 			<Parents />
 			<UseLayoutEffec />
 			<Memo />
+			<UseMeMo num={4} />
 		</main>
 	);
 }
